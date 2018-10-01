@@ -24,17 +24,17 @@ Before proceeding with the evacuation procedure one should confirm the following
 
 * Add an rc source file with user having admin rights.
 * Make sure that nova-compute service is down on the compute node for which we are going to perform the evacuation. This will   avoid nova-scheduler to allocate the instances on this failed/shutdown compute node while it’s in healthy state.
+
 * To check the nova-compute service status use the following command;
 
-`./evacuation.sh -n dev-compute00.sahaba.net -a check -k evacrc`
+  `./evacuation.sh -n dev-compute00.sahaba.net -a check -k evacrc`
+  - dev-compute00.sahaba.net is the node name which is in shutdown state and need to be repaired.
 
-    - dev-compute00.sahaba.net is the node name which is in shutdown state and need to be repaired.
-
-    - evacrc is an rc file with admin rights.
+  - evacrc is an rc file with admin rights.
 
 * To disable the nova-compute service and then perform the evacuation of all the instances for a particular node use the        following command;
 
-`./hostmaint.sh -n dev-compute00.sahaba.net -a disable -k evacrc -t nonlive`
+`./evacuation.sh -n dev-compute00.sahaba.net -a disable -k evacrc -t nonlive`
 
 This will perform a nonlive migration of all the instances on dev-compute00.sahaba.net node to some other available node and restart all the instances.
 **Notice:**
