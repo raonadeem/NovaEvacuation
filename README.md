@@ -38,8 +38,8 @@ Before proceeding with the evacuation procedure one should confirm the following
 
   This will perform a nonlive migration of all the instances on dev-compute00.sahaba.net node to some other available node     and restart all the instances.
   
-**Notice:**
-This command would be successful if all the instances on this node are in running state and will fail if any of the instance is not in running state.
+  **Notice:**
+  This command would be successful if all the instances on this node are in running state and will fail if any of the 	       instance is not in running state.
 	
 * To enable the nova-compute service on a node once it’s in healthy and repaired state so that nova-scheduler can spawn the     instances on this node run the following command;
 
