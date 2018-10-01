@@ -32,7 +32,7 @@ Before proceeding with the evacuation procedure one should confirm the following
 
     - evacrc is an rc file with admin rights.
 
-    - To disable the nova-compute service and then perform the evacuation of all the instances for a particular node use the        following command;
+* To disable the nova-compute service and then perform the evacuation of all the instances for a particular node use the        following command;
 
 `./hostmaint.sh -n dev-compute00.sahaba.net -a disable -k evacrc -t nonlive`
 
